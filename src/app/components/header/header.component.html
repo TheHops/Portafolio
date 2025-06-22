@@ -1,0 +1,131 @@
+
+
+<div id="header_body" onload="calcular()">
+  <div class="container">
+    <div class="bubbles">
+      <!-- For para las burbujas -->
+      <span *ngFor="let valor of retraso" [ngStyle]="{ '--d': valor.duracion, '--r': valor.retraso }">
+      </span>
+        <!-- {{valor.duracion}}
+        {{valor.retraso}} -->
+    </div>
+
+    <div id="navbar">
+      <header>
+        <div id="fondito"></div>
+
+        <a href="#header_body" class="logo">
+          <img src="../../../assets/LogoNuevoConfirmadoSoloDetallesBlancos.svg" alt="">
+          HOPS
+        </a>
+
+        <ul id="menu">
+          <li><a href="#titulo1">Sobre mí</a></li>
+          <li><a href="#seccionProyectos">Proyectos</a></li>
+          <li><a href="#seccionContacto">Contacto</a></li>
+        </ul>
+
+        <i class='bx bx-menu' id="menu-icon" (click)="menuCambio()"></i>
+      </header>
+    </div>
+
+    <div class="botones_inicio">
+      <a href="#titulo1" id="getStarted" style="--color:#4FC3DC"> <!--4FC3DC B955FF-->
+        <span>Ver mi trabajo</span>
+        <i id="getStartedI"></i>
+      </a>
+
+      <!-- Botón para descargar el CV -->
+      <a href="../../../assets/docs/JJMC CV (V12).pdf" download="JJMC CV" target="_blank" id="botonDescargarCV" style="--color:#4FC3DC">
+        <div id="iconDivBtnDownload">
+          <i class='bx bxs-download bx-sm'></i>
+        </div>
+        Descargar CV</a>
+    </div>
+
+    <!-- <div class="separadorInicio"></div> -->
+  </div> <!-- Fin div .container -->
+
+
+  <div id="noHeader">
+    <div id="sobreMi">
+      <div class="separador"></div>
+
+      <div id="titulo1">
+        <span>Sobre mí</span>
+        <div class="linea"></div>
+      </div>
+
+      <div class="contenido">
+        <!-- <div id="degradado"></div> -->
+
+
+        <div class="box">
+          <div class="box_content">
+            <img src="../../../assets/foto001.jpg" alt="Fotografía de propietario">
+
+            <!-- Texto -->
+
+            <br>
+
+            <h3>Egresado
+              <br><br>
+              <span>
+                Diseñador UI/UX
+                <br>
+                Programador
+              </span>
+            </h3>
+
+            <br>
+
+            <a href="#seccionContacto">Contacto</a>
+          </div>
+        </div>
+        <div class="descripcion">
+          <!-- <p>
+            Soy un estudiante de ingeniería en computación con un fuerte enfoque en el <b>desarrollo web</b>. Soy un
+            <b>programador</b> hábil en lenguajes como <i>Javascript, Python, Java y C</i>, y tengo conocimientos sólidos en
+            diseño <i>UI/UX</i>. Actualmente estoy buscando una oportunidad como <b>desarrollador web</b> en la que pueda
+            poner en práctica mis habilidades técnicas y de diseño. Si bien soy originario de Managua, Nicaragua, estoy
+            abierto a oportunidades en cualquier parte del mundo. ¡No dude en ponerse en contacto conmigo si cree que podemos
+            trabajar juntos!
+          </p> -->
+          <h2 id="tituloNombre">Soy <span>Jasson Josué Medina</span></h2>
+          <p>
+            Soy un egresado de <i>ingeniería en computación</i> con experiencia en desarrollo web y habilidades en lenguajes como <b>Javascript, Python, Java y C.</b> Busco oportunidades como desarrollador web en cualquier lugar del mundo. ¡Contáctame si
+            quieres colaborar!
+          </p>
+        </div>
+      </div>
+
+    </div> <!-- Fin div #sobreMi -->
+
+    <div class="separador"></div>
+
+    <!-- Sección para experiencia laboral -->
+    <app-experience></app-experience>
+
+    <!-- Sección para agregar los conocimientos -->
+    <app-knowledge></app-knowledge>
+
+    <!-- Sección para los proyectos -->
+    <app-project id="seccionProyectos"></app-project>
+
+    <!-- Sección para los contactos -->
+    <app-contact id="seccionContacto"></app-contact>
+  </div> <!-- Fin div #noHeader -->
+
+  <!-- -------------------------------------------------------- -->
+
+  <!-- -------------------------------------------------------- -->
+
+</div> <!-- Fin div #header_body -->
+
+<!-- <div id="particles-js" style="height: 50vh;"></div> -->
+
+<!-- <canvas id="mi-canvas"></canvas> -->
+
+<!-- <script src="app.js"></script>
+<script src="particles.js"></script> -->
+

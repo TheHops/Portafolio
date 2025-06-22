@@ -1,0 +1,85 @@
+<div id="contactBody">
+  <div class="separador"></div>
+
+  <div id="titulo5"> <!-- Titulo -->
+    <span>Contacto</span>
+    <div class="linea"></div>
+  </div> <!-- Fin titulo2 -->
+
+  <div id="comentarioContactos">
+    <span>¿Tiene alguna pregunta o quiere trabajar juntos?</span>
+  </div>
+
+  <div id="contactContent">
+    <div id="iconsContactContent">
+      <div id="iconsContent">
+        <!-- Correo -->
+        <a href="mailto:jasson.jjmc@gmail.com" target="_blank">
+          <i class='bx bxs-envelope bx-lg bx-tada-hover'></i>
+        </a>
+
+        <!-- Github -->
+        <a href="https://github.com/Hops28" target="_blank">
+          <i class='bx bxl-github bx-lg bx-tada-hover'></i>
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/Hops.jc/" target="_blank">
+          <i class='bx bxl-facebook-circle bx-lg bx-tada-hover'></i>
+        </a>
+
+        <!-- linkedin -->
+        <a href="https://www.linkedin.com/in/jj-medina/" target="_blank">
+          <i class='bx bxl-linkedin-square bx-lg bx-tada-hover'></i>
+        </a>
+      </div>
+    </div>
+    <div id="separadorVertical"></div>
+    <div id="formContactContent">
+      <form action="javascript:void(0)" (submit)="send()" method="post" #miFormulario="ngForm" id="FormularioContactos">
+        <!-- Input para nombre -->
+        <div class="inputContactForm">
+          <input type="email" name="Nombre" id="txtNameContact" class="infoContactos"
+          (blur)="verificarValoresInputContact($event)" autocomplete="off"
+          [(ngModel)]="txtNombre"
+          required>
+          <label class="lblContacts" for="txtNameContact">Nombre</label>
+        </div> <!-- cierre Input correo -->
+
+        <!-- Input para correo -->
+        <div class="inputContactForm">
+          <input type="email" name="Correo" id="txtEmailContact" class="infoContactos"
+          (blur)="verificarValoresInputContact($event)" autocomplete="off"
+          [(ngModel)]="txtCorreo"
+          pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+          required>
+          <label class="lblContacts" for="txtEmailContact">Correo</label>
+        </div> <!-- cierre Input correo -->
+
+        <!-- Input para asunto -->
+        <div class="inputContactForm">
+          <input type="text" name="Asunto" id="txtTopicContact" class="infoContactos"
+          (blur)="verificarValoresInputContact($event)" autocomplete="off"
+          [(ngModel)]="txtAsunto"
+          required>
+          <label class="lblContacts" for="txtTopicContact">Asunto</label>
+        </div> <!-- cierre Input asunto -->
+
+        <!-- Input para descripcion -->
+        <div class="inputContactForm">
+          <textarea name="Descripcion" id="" cols="30" rows="6" id="txtDescriptionContact"
+          class="infoContactos"
+          (blur)="verificarValoresInputContact($event)" autocomplete="off"
+          [(ngModel)]="txtDescripcion"
+          required></textarea>
+          <label class="lblContacts" for="txtDescriptionContact">Descripción</label>
+        </div> <!-- cierre Input descripcion -->
+
+        <!-- Botón para enviar -->
+        <div id="btnEnviarCorreo">
+          <button type="submit" id="btnEnviar" [disabled]="!miFormulario.valid" [attr.title]="miFormulario.invalid ? 'Tiene que llenar correctamente todos los campos' : ''">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
