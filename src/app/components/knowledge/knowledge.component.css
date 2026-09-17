@@ -100,7 +100,7 @@
 
 #knowledgeContent .conocimiento a {
   transition: all .2s ease;
-
+  text-decoration: none;
   width: 100%;
 }
 

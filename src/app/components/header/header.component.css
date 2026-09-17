@@ -505,7 +505,7 @@ header ul li a:hover {
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  line-height: 20px;
+  line-height: 23px;
   /*Sirve para el interlineado*/
 }
 
@@ -772,6 +772,7 @@ header ul li a:hover {
   color: hsl(191, 67%, 60%);
 }
 
-.descripcion p i {
+.descripcion p i,
+.descripcion p strong {
   color: hsl(270, 100%, 75%);
 }
